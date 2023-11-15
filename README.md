@@ -13,6 +13,12 @@
 
 ## 📜 Credits
 
-Everything is coded by Alex lo Storto unless otherwise noted
+```python
+class Developers:
+    self.working = True
+
+    def getDevelopers(self):
+        return ['alexlostorto']
+```
 
 Licensed under the MIT License.
