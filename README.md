@@ -5,6 +5,7 @@
 </p>
 
 <p align="center"><img width="100%" src=".github/desktop.png" alt="desktop version of the pokémon card game" /></p>
+<img width="250px" align="right" src=".github/mobile.png">
 
 ## ✨ Features
 
