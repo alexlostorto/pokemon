@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.clouds {
+    width: 100%;
+    object-fit: cover;
+    height: 23rem;
+}
+
+.logo {
+    width: 40rem;
+    position: absolute;
+    left: 50%;
+    top: 0rem;
+    transform: translate(-55%, -50%);
+}
+
+main {
+    padding-top: 5rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.pokemon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.pokemon-card img {
+    width: 17rem;
+}
+
+.pokemon-card img:hover,
+.previous img:hover,
+.next img:hover {
+    animation: wave 0.5s ease forwards;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    30% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.pokemon-stats {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.pokemon-stats > div {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    gap: 0.8rem;
+}
+
+.pokemon-stats .scores {
+    text-align: end;
+}
+
+.previous,
+.next {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10rem;
+    gap: 1rem;
+    font-size: 1.3rem;
+}
+
+.previous img,
+.next img {
+    width: 8rem;
+}
+
+.previous span {
+    margin-left: 1rem;
+}
+
+.previous:hover,
+.next:hover {
+    cursor: pointer;
+}
+
+.previous:hover span,
+.next:hover span {
+    opacity: 0.6;
+}
+
+.pokeball {
+    position: absolute;
+    bottom: -50%;
+}
+
+.pokeball.one {
+    width: 10rem;
+    left: 10%;
+    top: 5rem;
+    transform: rotate(-20deg);
+    filter: blur(4px);
+}
+
+.pokeball.two {
+    width: 6rem;
+    left: 6%;
+    bottom: 5%;
+    transform: rotate(-40deg);
+    filter: blur(1px);
+}
+
+.pokeball.three {
+    width: 7rem;
+    right: 10%;
+    top: 8rem;
+    transform: rotate(20deg);
+    filter: blur(0.5px);
+}
+
+.pokeball.four {
+    width: 5rem;
+    right: 10%;
+    bottom: 10%;
+    transform: rotate(-20deg);
+    filter: blur(1px);
+}
+
+@media screen and (max-width: 1000px) {
+    .pokeball.one,
+    .pokeball.two,
+    .pokeball.three,
+    .pokeball.four {
+        display: none;
+    }
+}
