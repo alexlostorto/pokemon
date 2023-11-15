@@ -11,6 +11,13 @@
 - Pokémon Card Game created using html, css and vanilla javascript.
 - Uses Pokémon's API to get Pokémon data.
 
+## 📋 To-do List
+
+- Make mobile responsive
+- Fix logic for _Previous_ button
+- Add Pokémon types
+- Find higher-quality clouds image
+
 ## 📜 Credits
 
 ```python
