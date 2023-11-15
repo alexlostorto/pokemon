@@ -18,6 +18,8 @@
 - Fix logic for _Previous_ button
 - Add Pokémon types
 - Find higher-quality clouds image
+- Add loading animation to wait for PokeAPI
+- Add error messages/pop-ups
 
 ## 📜 Credits
 
