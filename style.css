@@ -25,6 +25,7 @@ a {
 
 .logo {
     width: 40rem;
+    height: auto;
     position: absolute;
     left: 50%;
     top: 0rem;
@@ -50,6 +51,7 @@ main {
 
 .pokemon-card img {
     width: 17rem;
+    height: auto;
 }
 
 .pokemon-card img:hover,
@@ -126,6 +128,7 @@ main {
 .pokeball {
     position: absolute;
     bottom: -50%;
+    height: auto;
 }
 
 .pokeball.one {
