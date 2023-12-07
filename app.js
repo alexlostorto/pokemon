@@ -1,14 +1,30 @@
 class Pokemons {
     constructor() {
         this.pokemons = [];
-        this.current = 0;
+        this.addPokemon();
+        this.current = -1;
     }
 
     async addPokemon() {
         const data = await this.getRandomPokemon();
         this.pokemons.push(new Pokemon(data));
-        this.current = this.pokemons.length;
-        this.pokemons[this.current-1].updateStats();
+    }
+
+    next() {
+        this.current++;
+        if (this.current == this.pokemons.length - 1) {
+            this.addPokemon();
+        }
+        this.pokemons[this.current].updateStats();
+    }
+
+    previous() {
+        if (this.current <= 0) {
+            console.log("Can't go back any further");
+            return;
+        }
+        this.current--;
+        this.pokemons[this.current].updateStats();
     }
 
     generateRandomInt(min, max) {
@@ -50,7 +66,6 @@ class Pokemon {
         this.specialAttack = data.stats[3].base_stat;
         this.specialDefense = data.stats[4].base_stat;
         this.speed = data.stats[5].base_stat;
-        this.updateStats();
     }
 
     capitalizeFirstLetter(str) {
@@ -81,18 +96,11 @@ class Controls {
     }
 
     previousPokemon() {
-        console.log(this.pokemons)
-        if (this.pokemons.current === 0) {
-            console.log("Can't go back any further");
-            return;
-        }
-        this.pokemons.current--;
-        this.pokemons.pokemons[this.pokemons.current].updateStats();
+        this.pokemons.previous();
     }
 
-    async nextPokemon() {
-        this.pokemons.current++;
-        this.pokemons.addPokemon();
+    nextPokemon() {
+        this.pokemons.next();
     }
 }
 
