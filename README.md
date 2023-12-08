@@ -19,7 +19,7 @@ Read article on [Medium](https://medium.com/@lostorto.business/making-a-pok%C3%A
 ## 📋 To-do List
 
 - Make mobile responsive
-- Fix logic for _Previous_ button
+- Remove image delay when iterating through Pokémon
 - Add Pokémon types
 - Find higher-quality clouds image
 - Add loading animation to wait for PokeAPI
